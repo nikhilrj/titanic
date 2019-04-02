@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.mxnet:mxnet-full_2.11-linux-x86_64-cpu:1.5.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/mxnet/mxnet-full_2.11-linux-x86_64-cpu/1.5.0-SNAPSHOT/mxnet-full_2.11-linux-x86_64-cpu-1.5.0-20190331.203709-108.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/mxnet/mxnet-full_2.11-linux-x86_64-cpu/1.5.0-SNAPSHOT/mxnet-full_2.11-linux-x86_64-cpu-1.5.0-20190331.203709-108-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/mxnet/mxnet-full_2.11-linux-x86_64-cpu/1.5.0-SNAPSHOT/mxnet-full_2.11-linux-x86_64-cpu-1.5.0-20190331.203709-108-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

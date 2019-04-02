@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: hackfest-pvc-blobfuse-flexvol
+spec:
+  accessModes:
+  - ReadOnlyMany
+  resources:
+    requests:
+      storage: 10Gi
+  volumeName: hackfest-pv-blobfuse-flexvol
+  storageClassName: ""

@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mxnet-demo
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - name: mxnet-demo
+        image: tdbanktest.azurecr.io/mxnet-layer6:cuda92
+        imagePullPolicy: Always
+        args: ["-Xdebug","-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005", "-jar", "/modeldata/mxnet/mxnet-java-demo-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+        command: ["java"]
+        env:
+         - name: DataPath
+           value: /modeldata/mxnet
+        ports:
+        - containerPort: 5005
+          name: "jvm-debug"
+        volumeMounts:
+        - mountPath: /modeldata
+          name: flexvol-mount
+      restartPolicy: Never
+      volumes:
+      - name: flexvol-mount
+        persistentVolumeClaim:
+          claimName: hackfest-pvc-blobfuse-flexvol
+  backoffLimit: 4
+  ttlSecondsAfterFinished: 600
